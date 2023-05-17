@@ -4,7 +4,7 @@ ARG REGION=jp
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install -y \
     ssh wget unzip vim curl nginx
-RUN nginx
+
 RUN wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /ngrok-stable-linux-amd64.zip\
     && cd / && unzip ngrok-stable-linux-amd64.zip \
     && chmod +x ngrok
